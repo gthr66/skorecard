@@ -29,3 +29,22 @@ print(my_dog.name, "is", Dog.species, my_dog.age)
 # Call the instance methods
 print(my_dog.description())  # Output: Buddy is 3 years old
 print(my_dog.speak("Woof"))  # Output: Buddy says Woof
+
+class Animal(Dog):
+    def __init__(self, other_name, other_age, other_species):
+        super().__init__("Doggy", 5)
+        self.other_name = other_name
+        self.other_age = other_age
+        self.other_species = other_species
+
+    def speak1(self, sound=""):
+        return f"{self.other_name} is {self.other_age} years old and says {sound}"
+    
+    def friends(self):
+        return f"{self.other_name} and {self.name} are good friends"
+    
+my_animal = Animal("Tom", 3, "cat")
+
+print(my_animal.speak("Woof"))
+print(my_animal.speak1("Miao"))
+print(my_animal.friends())
