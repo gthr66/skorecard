@@ -28,5 +28,3 @@ proc sgplot data=recalibrated_data;
     xaxis label="Original PD Estimates";
     yaxis label="Recalibrated PD Estimates";
 run;
-
-# test
